@@ -1,0 +1,26 @@
+<div class="product">
+  <div class="product__title">
+    <img [src]="product.img" />
+    <span>
+      {{ product.label }}
+    </span>
+  </div>
+  <div class="product__container">
+    <span class="product__price">${{ product.price }}</span>
+    <div class="product__cart">
+      <button
+        (click)="removeFromCart()"
+        class="product__cart__button product__cart__button--small"
+      >
+        -
+      </button>
+      <span>{{ count }}</span>
+      <button
+        (click)="addToCart()"
+        class="product__cart__button product__cart__button--small"
+      >
+        +
+      </button>
+    </div>
+  </div>
+</div>

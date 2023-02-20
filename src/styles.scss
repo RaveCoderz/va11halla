@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Va-11 Hall-A 6px";
+  src: url("./assets/fonts/VA-11\ Hall-A\ 6px.woff2") format("woff2"),
+    url("./assets/fonts/VA-11\ Hall-A\ 6px.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Va-11 Hall-A 6px Bold";
+  src: url("./assets/fonts/VA-11\ Hall-A\ 6px\ Bold.woff2") format("woff2"),
+    url("./assets/fonts/VA-11\ Hall-A\ 6px\ Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Va-11 Hall-A 6px Non-mono";
+  src: url("./assets/fonts/VA-11\ Hall-A\ 6px\ Non-mono.woff2") format("woff2"),
+    url("./assets/fonts/VA-11\ Hall-A\ 6px\ Non-mono.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Va-11 Hall-A 10px";
+  src: url("./assets/fonts/VA-11\ Hall-A\ 10px.woff2") format("woff2"),
+    url("./assets/fonts/VA-11\ Hall-A\ 10px.woff") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #fcfcfc;
+
+  background-color: #000;
+
+  font-family: "Va-11 Hall-A 10px", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0.25rem solid #000;
+  border-radius: 5rem;
+  background: #ff0057;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0057dd;
+}

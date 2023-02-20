@@ -1,0 +1,15 @@
+<div class="store">
+  <button title="Перейти в корзину" [routerLink]="['/cart']" class="button">
+    {{
+      getCartCount() > 0
+        ? "Товаров в корзине: " + getCartCount() + ". Сумма: $" + getCartPrice()
+        : "Корзина пуста"
+    }}
+  </button>
+  <h1>Каталог</h1>
+
+  <div class="grid">
+    <app-store-product [product]="item" *ngFor="let item of store">
+    </app-store-product>
+  </div>
+</div>

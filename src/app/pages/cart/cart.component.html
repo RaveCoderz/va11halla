@@ -1,0 +1,23 @@
+<div class="cart">
+  <button [routerLink]="['/']" class="button">Перейти к каталогу</button>
+  <h1>Корзина</h1>
+  <!-- <app-cart-product
+    [product]="{
+      label: 'Федора',
+      img: './assets/images/drinks/fed.png',
+      price: 250
+    }"
+  ></app-cart-product> -->
+  <ng-container *ngIf="cart.length > 0; else empty">
+    <app-cart-product
+      *ngFor="let item of cart"
+      [product]="item.product"
+      [count]="item.count"
+    ></app-cart-product>
+  </ng-container>
+  <ng-template #empty>
+    <p>В данный момент в корзине нет товаров</p>
+  </ng-template>
+  <h2>Итого</h2>
+  <button class="button">Оформить заказ</button>
+</div>

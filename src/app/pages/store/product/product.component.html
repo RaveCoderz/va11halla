@@ -1,0 +1,27 @@
+<div class="product">
+  <img [src]="product.img" />
+  <span>{{ product.label }}</span>
+  <span class="product__price">${{ product.price }}</span>
+  <div class="product__cart">
+    <ng-container *ngIf="count < 1; else cartButtons">
+      <button (click)="addToCart()" class="product__cart__button">
+        В корзину
+      </button>
+    </ng-container>
+    <ng-template #cartButtons>
+      <button
+        (click)="removeFromCart()"
+        class="product__cart__button product__cart__button--small"
+      >
+        -
+      </button>
+      <span>{{ count }}</span>
+      <button
+        (click)="addToCart()"
+        class="product__cart__button product__cart__button--small"
+      >
+        +
+      </button>
+    </ng-template>
+  </div>
+</div>
